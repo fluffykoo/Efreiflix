@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ficheserie</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="CatalogueSeries.html">Séries</a></li>
+            <li><a href="#">Films</a></li>
+            <li><a href="seconnecter.html">Connexion</a></li>
+          </ul>
+        </nav>
+        <form>
+          <input type="text" placeholder="Rechercher">
+          <button type="submit">Rechercher</button>
+        </form>
+      </header>
+      <main>
+        <div class="banner">
+            <img src="img/banner.jpg" alt="Image de la bannière">
+            <div class="banner-text">
+              <h1>Alchemy of Souls</h1>
+              <p>Détails de la série</p>
+              <a href="ficheserie.html"><button> ▶ Episode 1</button></a>
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                  <li><button class="btn" data-target="section1">Synopsis</button></li>
+                  <li><button class="btn" data-target="section2">Episodes</button></li>
+                  <li><button class="btn" data-target="section3">Commentaires</button></li>
+                  
+                </ul>
+            </nav>
+        </div>
+        <div class="description">
+          <p>
+            Titre original : Hwanhon<br>
+            Diffuseur : tvN<br>
+            Créateur : Park Joon-Hwa<br>
+            Genres : Fantasy, Historique, Romance, Action, Arts martiaux, Comédie, Dramede Park Joon-Hwa · 2 saisons (Terminée) · 1 h 13 min  <br>
+            Pays d'origine : Corée du Sud<br>
+            Première diffusion (France) : 23 juillet 2022<br>
+          </p>
+        </div>
+
+          
+        <section id="section1" class="section-hidden">
+            <div>
+                <h2>Synopsis</h2>
+                 <p>Dans la ville de Daeho, un phénomène étrange appelé "hwanhonsul" (l'âme des morts retourne aux vivants), va causer le changement du destin de plusieurs personnes.
+                Mu Deok, une guerrière d'élite dont l'âme a été piégée dans un corps faible, fait la rencontre de Jang Wuk, un homme venant de la famille noble Jang et devient sa servante. Mais elle lui apprend également secrètement à se battre.
+                Seo Yul vient de la noble famille Seo, il semble être la perfection, un bel homme, intelligent et ayant de solides compétences en arts martiaux.
+                Enfin, Go Won est le prince héritier qui souhaite devenir un roi généreux.</p>
+            </div>
+            
+
+        </section>
+          
+          <section id="section2" class="section-hidden">
+            <h2>Episodes</h2>
+            <section class="featured">
+                <div class="grid-container" style="grid-template-columns: repeat(4, 1fr);">
+                  <div class="card">
+                    <img src="img/ep1.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 1</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep2.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 2</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep3.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 3</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep4.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 4</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep5.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 5</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep6.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 6</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep7.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 7</h3>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/ep8.jpeg" alt="YOU">
+                    <div class="image-overlay">
+                      <h3>Ep 8</h3>
+                    </div>
+                  </div>
+            </section>
+          </section>
+
+          <section id="section3" class="section-hidden">
+            <h2>Commentaires</h2>
+            <p>Il n'y a pas encore de commentaires :/</p>
+          </section>
+          <script>
+            const btns = document.querySelectorAll('.btn');
+            const sections = document.querySelectorAll('.section-hidden');
+
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', function() {
+                     // Cacher toutes les sections
+                    for (let j = 0; j < sections.length; j++) {
+                    sections[j].classList.remove('section-show');
+                    }
+             
+
+                    // Afficher la section correspondante
+                    const target = this.getAttribute('data-target');
+                    const section = document.getElementById(target);
+                    section.classList.add('section-show');
+                });
+            }
+          </script>
+        </main>
+
+        <footer>
+          <p>&copy; 2023 - EfreiFlix-Mon Site de Streamingl</p>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>
+    

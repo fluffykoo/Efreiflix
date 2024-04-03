@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Catalogue Series</title>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+
+<!-- Inclure SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
+</head>
+<body>
+	<header>
+        <div class="logo">
+          <img src="img/logo.png" alt="EreiFlix Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="CatalogueSeries.html">Séries</a></li>
+            <li><a href="#">Films</a></li>
+            <li><a href="seconnecter.html">Connexion</a></li>
+			  &nbsp
+			  <select id="selecteur-couleur" onchange="fonctionChangerCouleur()">
+				  <option value="noir">Theme Sombre 🌑</option>
+				  <option value="blanc">Theme Clair ☀️</option>
+			  </select>
+          </ul>
+        </nav>
+        <form>
+
+			<input type="text" id="recherche" placeholder="Rechercher">
+			<button type="submit">Rechercher</button>
+        </form>
+
+	</header>
+	
+	<div class="slogan-section">
+		<!--<img src="img/ban.jpeg" alt="Image Drama">-->
+		<h2>Découvrez les meilleures séries en streaming</h2>
+		<p>Regardez vos séries préférées en ligne, avec des sous-titres en anglais</p>
+		<a href="seconnecter.html"><button class="mybutton"> Se Connecter</button></a>
+	</div>
+	
+	<div class="dramas-section">
+		<div class="drama">
+			<img src="img/murder.png" alt="Image Drama">
+			<h3>Murder</h3>
+			<p>Annalise Keating est une professeur de droit et avocate à la tête de son propre cabinet à Philadelphie. Chaque année, certains de ses étudiants ont le privilège de travailler dans son cabinet, mais un jour, tout dérape.</p>
+			<button id="myButton1"class ="mybutton">Détails de la série</button>
+		</div>
+		
+		<div class="drama">
+			<img src="img/peakyblinders.JPG" alt="Image Drama">
+			<h3>Peaky Blinders</h3>
+			<p>Birmingham, en 1919. Un gang familial règne sur un quartier de la ville : les Peaky Blinders, ainsi nommés pour les lames de rasoir qu'ils cachent dans la visière de leur casquette.</p>
+			<button id="myButton2" class ="mybutton" >Détails de la série</button>
+		</div>
+		
+		<div class="drama">
+			<img src="img/outer.jpeg" alt="Image Drama">
+			<h3>Outer Banks</h3>
+			<p>Un adolescent demande à ses trois meilleurs amis de partir à la recherche d'un trésor légendaire lié à la disparition de son père. Cependant, cette aventure s'avère être un danger pour toutes les personnes impliquées.</p>
+			<button id="myButton3" class ="mybutton">Détails de la série</button>
+		</div>
+		
+		<div class="drama">
+			<img src="img/bridgerton2.jpg" alt="Image Drama">
+			<h3>Bridgerton</h3>
+			<p>À l'époque de la Régence en Angleterre, huit frères et soeurs proches de la puissante famille Bridgerton tentent de trouver l'amour.</p>
+			<button id="myButton4"class ="mybutton">Détails de la série</button>
+		</div>
+
+		<div class="drama">
+			<img src="img/you2.png" alt="Image Drama">
+			<h3>You</h3>
+			<p>Désormais mariés et parents d'un petit bébé, Love et Joe essaient de vivre normalement dans les faubourgs cossus de Madre Linda. Mais les habitudes ont la peau dure...</p>
+			<button id="myButton5" class ="mybutton">Détails de la série</button>
+		</div>
+
+		<div class="drama">
+			<img src="img/blood.png" alt="Image Drama">
+			<h3>Blood & Water</h3>
+			<p>Une adolescente obtient son transfert dans le même lycée qu'une jeune fille qu'elle soupçonne d'être sa soeur, enlevée à la naissance 17 ans auparavant.</p>
+			<button class ="mybutton" id="myButton6" >Détails de la série</button>
+		</div>
+
+
+	</div>
+
+
+	<script>
+
+     function showSerieDetails(serie) {
+    	fetch('series.json')
+        	.then(response => response.json())
+        	.then(data => {
+            	const serieData = data.serieData.find(obj => obj.titre === serie);
+
+            if (serieData) {
+                const popupContent = `<p>Nom de la série: ${serieData.titre}</p>
+                                      <p>Année de sortie: ${serieData['Annee de Sortie']}</p>
+                                      <p>Réalisateur: ${serieData.Realisateur}</p>
+                                      <p>Nombre d'épisodes: ${serieData['Nombre episodes']}</p>
+                                      <p>Histoire : ${serieData['Description']}</p>`;
+				console.log(popupContent);
+				const popup = document.createElement('div');
+                popup.innerHTML = popupContent;
+                popup.style.position = "fixed";
+                popup.style.top = '50%';
+                popup.style.left = '50%';
+                popup.style.transform = 'translate(-50%, -50%)';
+                popup.style.backgroundColor = '#fff';
+                popup.style.padding = '20px';
+                popup.style.borderRadius = '10px';
+                popup.style.boxShadow = '0 5px 10px rgba(0, 0, 0, 0.3)';
+                document.body.appendChild(popup);
+            } else {
+                alert("Cette série n'est pas disponible");
+            }
+
+       	    });
+    }
+
+	 const button1 = document.getElementById("myButton1");
+	 button1.addEventListener("click", function() {
+		 const serie = "Murder";
+		 showSerieDetails(serie);
+
+	 });
+
+	 const button2 = document.getElementById("myButton2");
+	 button2.addEventListener("click", function() {
+		 const serie = "Peaky Blinders";
+		 showSerieDetails(serie);
+	 });
+	 const button3 = document.getElementById("myButton3");
+	 button3.addEventListener("click", function () {
+		 const serie = "Outer Banks";
+		 showSerieDetails(serie);
+	 });
+	 const button4 = document.getElementById("myButton4");
+	 button4.addEventListener("click", function () {
+		 const serie = "Bridgerton";
+		 showSerieDetails(serie);
+	 });
+	 const button5 = document.getElementById("myButton5");
+	 button5.addEventListener("click", function () {
+		 const serie = "you";
+		 showSerieDetails(serie);
+	 });
+	 const button6 = document.getElementById("myButton6");
+	 button6.addEventListener("click", function () {
+		 const serie = "Blood & Water";
+		 showSerieDetails(serie);
+	 });
+    </script>
+	<script>
+		function fonctionChangerCouleur(){
+			var selecteur = document.getElementById("selecteur-couleur");
+			var body = document.getElementsByTagName("body")[0];
+			var navLinks = document.querySelectorAll("nav a");
+
+			if (selecteur.value === "noir"){
+				body.style.backgroundColor = "#141414";
+				body.style.color = "white";
+				navLinks.forEach(link => link.style.color = "white");
+			} else if (selecteur.value === "blanc"){
+				body.style.backgroundColor = "white";
+				body.style.color = "#141414";
+				navLinks.forEach(link => link.style.color = "black");
+			}
+		}
+	</script>
+    <footer>
+		<p>&copy; 2023 - EfreiFlix-Mon Site de Streaming</p>
+		<ul>
+		  <li><a href="#">À propos</a></li>
+		  <li><a href="#">Conditions d'utilisation</a></li>
+		  <li><a href="#">Politique de confidentialité</a></li>
+		  <li><a href="#">Contact</a></li>
+		</ul>
+	</footer>
+</body>
+</html>

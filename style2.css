@@ -1,0 +1,243 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+    background-color: black;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #30223DFF;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+#selecteur-couleur{
+    font-size: 1rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+  
+  .logo img {
+    height: 70px;
+    margin-right: 20px;
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  form input[type="text"] {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  form button[type="submit"] {
+    border: none;
+    background-color: #fff;
+    color:#30223DFF;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #30223DFF;
+    color: #fff;
+  }
+  form input[type="text"],
+  form button[type="submit"] {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  form input[type="text"] {
+    width: 75%;
+    margin-right: 10px;
+  }
+  
+  form button[type="submit"] {
+    background-color: #d4a4aa;
+    color: #fff;
+  }  
+
+
+
+
+/* Slogan section */
+
+.slogan-section{
+	background-color: #2c2c2c;
+	padding: 40px;
+	text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    align-content: center;
+
+}
+
+
+
+.slogan-section h2 {
+	font-size: 24px;
+	margin: 20px 0;
+    color: white;
+}
+
+.slogan-section p {
+	font-size: 18px;
+	margin-bottom: 20px;
+    color: white;
+}
+
+.mybutton{
+	color:white;
+    background-color:#d4a4aa;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+
+	display: inline-block;
+
+}
+
+.mybutton:hover{
+	background-color: #666;
+}
+
+/* Dramas section */
+
+.dramas-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	padding: 40px;
+}
+
+.drama {
+	background-color: #30223DFF;
+	padding: 20px;
+	text-align: center;
+    color: white;
+    border-radius: 60px;
+}
+
+.drama img {
+	max-width: 100%;
+    object-fit: cover; 
+	height: 300px; 
+}
+
+.drama h3 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.drama p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+	.header nav ul {
+		flex-direction: column;
+	}
+	
+	.header nav li {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+footer {
+    background-color: #d4a4aa;
+    color: #333;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer li {
+    margin-right: 20px;
+  }
+  
+  footer a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-bottom: 10px;
+    }
+  
+    form input[type="text"] {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  

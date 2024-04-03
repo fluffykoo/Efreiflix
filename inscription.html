@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Efreiflix</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Efreiflix Logo"></a>
+      </div>
+      <nav>
+        <ul>
+         <pre>Vous avez deja un compte?  </pre> <!--pour garder un espace apres le paragraphe-->
+          <li><a href="seconnecter.html">Connectez-vous!</a></li>
+          &nbsp
+          <select id="selecteur-couleur" onchange="fonctionChangerCouleur()">
+            <option value="noir">Theme Sombre 🌑</option>
+            <option value="blanc">Theme Clair ☀️</option>
+          </select>
+        </ul>
+      </nav>
+      
+    </header>
+    <main>
+    <div class="connexion">
+      <h1> S'inscrire </h1>
+      <form name="monformulaire" action="" method="post" onSubmit="return Verification()">
+        <label for="idNom">Nom <span class="text-danger">*</span></label>
+        <input type="text" name="nom" id="idNom">
+        <br><br>
+
+        <label for="idPrenom">Prénom</label>
+        <input type="text" name="prenom" id="idPrenom">
+        <br><br>
+
+        <label for="idEmail">Email <span class="text-danger">*</span></label>
+        <input type="text" name="email" id="idEmail">
+        <br><br>
+
+      <button type="submit" id="idValider" value="Envoyer">VALIDER</button>
+      </form>
+    </div>
+
+    </main>
+    <script>
+      function fonctionChangerCouleur(){
+        var selecteur = document.getElementById("selecteur-couleur");
+        var body = document.getElementsByTagName("body")[0];
+        var navLinks = document.querySelectorAll("nav a");
+        
+        if (selecteur.value === "noir"){
+         body.style.backgroundColor = "black";
+         body.style.color = "white";
+         navLinks.forEach(link => link.style.color = "white");
+        } else if (selecteur.value === "blanc"){
+         body.style.backgroundColor = "white";
+         body.style.color = "black";
+         navLinks.forEach(link => link.style.color = "black");
+        }
+        }
+    </script>
+    <script>
+      function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+      }
+
+      function Verification() {
+// Récupérer lavaleur des champs nom et email
+        var Nom = document.getElementById('idNom').value;
+        var Email = document.getElementById('idEmail').value;
+
+// Contrôle sur le nom
+        if(Nom==''){
+          alert('Vous devez compléter votre nom !');
+          document.getElementById('idNom').style.backgroundColor="red";
+          document.getElementById('idNom').style.color="#FFF";
+
+// Permet de bloquer l'envoi du formulaire
+          return false;
+        }
+        else{
+          document.getElementById('idNom').style.backgroundColor="#9C6";
+        }
+
+// Contrôle sur l'email
+        if (Email === '' || Email.indexOf('@') === -1) { // Si l'email est vide ou ne contient pas de caractère '@'
+
+          alert('Vous devez compléter votre adresse email');
+          document.getElementById('idEmail').style.backgroundColor="red";
+          document.getElementById('idEmail').style.color="#FFF";
+          return false;
+        }
+
+        else{
+          document.getElementById('idEmail').style.backgroundColor="#9C6";
+        }
+      }
+    </script>
+    <script>
+      const idEmail = document.querySelector('#idEmail');
+      const idPrenom = document.querySelector('#idPrenom');//
+      const idNom = document.querySelector('#idNom');
+      const idValider = document.querySelector('#idValider');
+
+      idValider.addEventListener('click', () => {
+        const emailValue = idEmail.value;
+        const prenomValue = idPrenom.value;
+        const nameValue = idNom.value;
+
+        if (emailValue &&  nameValue) {
+          const message = `BIENVENUE ${nameValue.toUpperCase()} ${prenomValue.toUpperCase()}!`;
+          alert(message);
+        } else {
+          alert('Veuillez remplir tous les champs.');
+        }
+      });
+    </script>
+    <footer>
+      <p>&copy; 2023 - EfreiFlix-Mon Site de Streaming</p>
+      <ul>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Conditions d'utilisation</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </footer>  
+  </body>
+</html>
+        

@@ -1,0 +1,54 @@
+{"Access-Control-Allow-Origin": "*",
+
+    "serieData": [
+      {
+        "titre": "you",
+        "Annee de Sortie": "2018",
+        "Realisateur": "Greg Berlanti",
+        "Nombre episodes": "40",
+        "Description": "You, ou Parfaite au Québec, est une série télévisée américaine développée par Greg Berlanti et Sera Gamble, diffusée depuis le 9 septembre 2018, d'abord sur la chaîne Lifetime pour sa première saison puis sur le service Netflix depuis la deuxième. Il s'agit d'une adaptation des deux premiers romans de la trilogie littéraire de l'auteur américaine Caroline Kepnes (en) qui met en scène le tueur en série, Joe Goldberg (en). La première saison adapte le premier roman, Parfaite (en), et la seconde sa suite, Les corps cachés (en). À partir de la troisième saison, la série met en scène une histoire inédite, n'adaptant pas le troisième roman."
+      },
+      {
+        "titre": "Peaky Blinders",
+        "Annee de Sortie": "2013",
+        "Realisateur": "Steven Knight",
+        "Nombre episodes": "36",
+        "Description": "Peaky Blinders est une série télévisée britannique en 36 épisodes d'environ 55 minutes créée par Steven Knight et diffusée entre le 12 septembre 2013 et le 3 avril 2022 sur BBC Two, puis sur BBC One pour la cinquième et sixième saison. La série narre l'histoire d'une famille de criminels de la communauté des Travellers, interprétée par Cillian Murphy, Helen McCrory, Paul Anderson et Joe Cole. Surnommés les « Peaky Blinders », ils ont la mainmise sur Birmingham et ses environs dans l'entre-deux-guerres. Saluée pour son aspect cinématographique, la complexité de ses personnages et l'interprétation des acteurs, ainsi que pour son utilisation d'une musique volontairement anachronique, la série a reçu une majorité de critiques positives."
+      },
+      {
+        "titre": "Bridgerton",
+        "Annee de Sortie": "2020",
+        "Realisateur": "Chris Van Dusen",
+        "Nombre episodes": "16",
+        "Description": "La série se déroule dans la haute société londonienne lors de la Régence anglaise du xixe siècle. L'histoire se concentre sur deux familles, les Bridgerton et les Featherington. La famille Bridgerton est composée de Violet, vicomtesse douairière Bridgerton, de ses quatre fils Anthony, Benedict, Colin et Gregory, et de ses quatre filles Daphné, Eloïse, Francesca et Hyacinthe. La famille Featherington est composée de Lady Portia Featherington, son mari le baron Archibald Featherington et leurs trois filles, Philippa, Prudence et Penelope, ainsi que de leur lointaine cousine Marina Thompson."
+      },
+      {
+        "titre": "Murder",
+        "Annee de Sortie": "2014",
+        "Realisateur": "Brian Yorkey",
+        "Nombre episodes": "90",
+        "Description": "Murder ou Meurtres à l'étude au Québec (How to Get Away with Murder) est une série télévisée américaine en 90 épisodes de 42 minutes créée par Peter Nowalk, produite par Shonda Rhimes et diffusée entre le 25 septembre 20141 et le 14 mai 2020 sur le réseau ABC et en simultané sur le réseau CTV2 puis sur CTV 2 au Canada.La série évolue dans le même univers que la série Scandal avec notamment un crossover dans l'épisode 12 de la saison 7 de Scandal et dans l'épisode 13 de la saison 4 de Murder."
+      },
+      {
+        "titre": "Blood & Water",
+        "Annee de Sortie": "2020",
+        "Realisateur": "Nosipho Dumisa,Travis Taute",
+        "Nombre episodes": "19",
+        "Description": "Blood and Water ou Le Sang et l'eau au Québec est une série télévisée sud-africaine créée par Nosipho Dumisa et Travis Taute, mise en ligne intégralement le 20 mai 2020 sur Netflix, incluant les pays francophones."
+      },
+      {
+        "titre": "Outer Banks",
+        "Annee de Sortie": "2017",
+        "Realisateur": "Shannon Burke, Josh Pate,Jonas Pate",
+        "Nombre episodes": "30",
+        "Description": "Outer Banks is an American action-adventure mystery teen drama streaming television series created by Josh Pate, Jonas Pate, and Shannon Burke that premiered on Netflix on April 15, 2020.The series is set in a community in the Outer Banks of North Carolina and follows conflict between two groups of teenagers in search of a lost treasure.In December 2021, the series was renewed for a third season which premiered on February 23, 2023.[6][7] In February 2023, ahead of the third season premiere, the series was renewed for a fourth season."
+      },
+      {
+      "titre": "Hunter x Hunter",
+      "Annee de Sortie": "1999",
+      "Realisateur":  "Megumi Han, Keiji Fujiwara, Miyuki Sawashiro",
+      "Nombre episodes": "62",
+      "Description": "Le jeune Gon vit sur une petite île avec sa tante. Abandonné par son père qui est un Hunter, à la fois un aventurier et un chasseur de primes, Gon décide à l'âge de 12 ans de partir pour devenir un Hunter. Cela ne sera pas chose aisée, il devra passer une suite de tests et examens en compagnie de milliers d'autres prétendants au titre de Hunter. Il sera aidé par de nouvelles connaissances qui aspirent au même but que lui tel que Kurapika, Leorio et Killua. "
+      }
+    ]
+  }

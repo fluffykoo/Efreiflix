@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Efreiflix</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Efreiflix Logo"></a>
+      </div>
+      <nav>
+        
+  
+        <ul>
+         <pre>Vous n'avez pas de comptes? </pre> <!--pour garder un espace apres le paragraphe-->
+          <li><a href="inscription.html">S'inscrire</a></li>
+          &nbsp
+          <select id="selecteur-couleur" onchange="fonctionChangerCouleur()">
+            <option value="noir">Theme Sombre 🌑</option>
+            <option value="blanc">Theme Clair ☀️</option>
+          </select>
+        </ul>
+      </nav>
+      
+    </header>
+    <main>
+      <div class="connexion">
+        <h1>Connectez-vous 👋 </h1>
+        <div>
+          <div class="item">
+            <label> Email</label>
+            <input> </input>
+          </div>
+          <div class="item">
+            <label> Mots de passe </label>
+            <input> </input>
+          </div>
+
+        </div>
+        <br>
+        <div class="item">
+         <button onclick="window.location.href = 'https://www.sephora.fr//';"> CONNEXION </button>
+        </div>	
+      </div>
+    </main>  
+    <script>
+      function fonctionChangerCouleur(){
+      var selecteur = document.getElementById("selecteur-couleur");
+      var body = document.getElementsByTagName("body")[0];
+      var navLinks = document.querySelectorAll("nav a");
+
+      if (selecteur.value === "noir"){
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        navLinks.forEach(link => link.style.color = "white");
+      } else if (selecteur.value === "blanc"){
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+        navLinks.forEach(link => link.style.color = "black");
+      }
+     }
+
+     </script>
+
+
+    <footer>
+      <p>&copy; 2023 - EfreiFlix-Mon Site de Streaming</p>
+      <ul>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Conditions d'utilisation</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </footer>  
+  </body>
+</html>
+        
